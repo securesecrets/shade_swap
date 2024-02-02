@@ -29,7 +29,7 @@ Features in development:
 - Optimized re-initialization to avoid reloading existing good data to get new pairs
 - Verification of matching configs between this & the secretcli install
 
-
+```
 usage: shade_swap.py [-h] [-i] [--input INPUT] [--output OUTPUT] [--amount AMOUNT] [-sim] [-k KEY] [--oracle_price ORACLE_PRICE]
                      [--gt GT] [--ge GE] [--lt LT] [--le LE]
 
@@ -47,6 +47,9 @@ options:
   --ge GE               Swap requirement for price greater or equal
   --lt LT               Swap requirement for price less
   --le LE               Swap requirement for price less or equal
+```
 
-Command to check the oracle price for SILK to be greater than 1.0 USD before swapping
+Examples to check the oracle price for SILK to be greater than 1.0 USD before swapping
+```
 shade_swap.py --input SILK --output BTC --amount .001 -sim --oracle_price SILK --gt 1.0
+```
