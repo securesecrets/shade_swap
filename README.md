@@ -23,12 +23,6 @@ Default Config:
 }
 ```
 
-Features in development:
-- Multi-hop routing & optimization
-- Per-chain data initialization
-- Optimized re-initialization to avoid reloading existing good data to get new pairs
-- Verification of matching configs between this & the secretcli install
-
 ```
 usage: shade_swap.py [-h] [-i] [--input INPUT] [--output OUTPUT] [--amount AMOUNT] [-sim] [-k KEY] [--oracle_price ORACLE_PRICE]
                      [--gt GT] [--ge GE] [--lt LT] [--le LE]
@@ -49,7 +43,14 @@ options:
   --le LE               Swap requirement for price less or equal
 ```
 
-Examples to check the oracle price for SILK to be greater than 1.0 USD before swapping
+Examples
 ```
-shade_swap.py --input SILK --output BTC --amount .001 -sim --oracle_price SILK --gt 1.0
+shade_swap.py --input SILK --output SHD --amount .001 --oracle_price SILK --gt 1.0
 ```
+
+Features in development:
+- Multi-hop routing & optimization
+- Per-chain data initialization
+- Optimized re-initialization to avoid reloading existing good data to get new pairs
+- Verification of matching configs between this & the secretcli install
+- Better symbol matching to allow using `ATOM` instead of `sATOM` or `BTC` instead of `saWBTC` etc.
